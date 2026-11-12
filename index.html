@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Mempo | Protetor bucal profissional sob medida</title>
-<meta name="description" content="Protetor bucal profissional feito sob medida por um faixa preta. Usado por atletas profissionais, em nível do UFC. Proteção profissional que cabe no seu bolso.">
+<meta name="description" content="Protetor bucal profissional feito sob medida por um faixa preta. Usado por atletas do UFC. Proteção profissional que cabe no seu bolso.">
 <meta property="og:title" content="Mempo">
-<meta property="og:description" content="Protetor bucal profissional feito sob medida por um faixa preta. Usado por atletas profissionais, em nível do UFC. Proteção profissional que cabe no seu bolso.">
+<meta property="og:description" content="Protetor bucal profissional feito sob medida por um faixa preta. Usado por atletas do UFC. Proteção profissional que cabe no seu bolso.">
 <meta property="og:locale" content="pt_BR">
 <link rel="alternate" hreflang="pt-BR" href="https://luizflaviomatias.github.io/mempo-protecao-bucal/">
 <link rel="alternate" hreflang="es-ES" href="https://luizflaviomatias.github.io/mempo-protecao-bucal/es/">
@@ -115,12 +115,16 @@
   .level h3{font-size:1.15rem;margin-bottom:.35rem}
   .level p{color:var(--muted);font-size:.95rem}
   .same{margin-top:1.5rem;text-align:center;font-family:Anton,sans-serif;text-transform:uppercase;font-size:clamp(1.4rem,3vw,2rem);letter-spacing:.5px}
-  .athletes{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1rem;margin-top:2.5rem}
-  .athlete{border-radius:var(--r);overflow:hidden;background:var(--bg);border:1px solid var(--line)}
-  .athlete img{width:100%;aspect-ratio:4/5;object-fit:cover;display:block}
-  .athlete div{padding:1rem 1.2rem}
+  .athletes{display:grid;grid-template-columns:repeat(3,1fr);grid-auto-flow:dense;gap:1rem;margin-top:2.5rem}
+  .athlete{margin:0;border-radius:var(--r);overflow:hidden;background:var(--bg);border:1px solid var(--line);display:flex;flex-direction:column}
+  .athlete.wide{grid-column:span 2}
+  .athlete .ph{height:340px;display:flex;align-items:flex-end;justify-content:center;overflow:hidden;background:radial-gradient(70% 85% at 50% 100%,rgba(175,254,40,.42),rgba(175,254,40,0) 70%),var(--bg-3)}
+  .athlete .ph img{display:block;max-width:100%;max-height:100%;width:auto;height:auto;-webkit-mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent),linear-gradient(#000 78%,transparent);-webkit-mask-composite:source-in;mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent),linear-gradient(#000 78%,transparent);mask-composite:intersect}
+  .athlete figcaption{padding:1rem 1.2rem;border-top:1px solid var(--line)}
   .athlete b{display:block}
   .athlete span{color:var(--muted);font-size:.88rem}
+  @media(max-width:860px){.athletes{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:520px){.athletes{grid-template-columns:1fr}.athlete.wide{grid-column:auto}.athlete .ph{height:320px}}
   @media(max-width:760px){.levels{grid-template-columns:1fr}}
 
   .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.2rem;margin-top:3.5rem}
@@ -230,9 +234,9 @@
 <section class="hero">
   <div class="wrap hero-grid">
     <div>
-      <span class="tag"><i></i>Utilizado por atletas profissionais até em nível do UFC.</span>
+      <span class="tag"><i></i>Utilizado por atletas do UFC.</span>
       <h1 class="display">Proteção profissional<br><span class="hl">que cabe no seu bolso.</span></h1>
-      <p class="lead">O protetor bucal sob medida que atletas profissionais de luta, em nível do UFC, usam para treinar e competir. Agora feito para você, seja qual for a sua faixa.</p>
+      <p class="lead">O protetor bucal sob medida que atletas do UFC usam para treinar e competir. Agora feito para você, seja qual for a sua faixa.</p>
       <div class="hero-ctas">
         <a class="btn btn-primary" href="https://wa.me/5511986854074?text=Ol%C3%A1%21%20Quero%20meu%20protetor%20bucal%20Mempo%20sob%20medida." target="_blank" rel="noopener"><svg><use href="#wa-icon"/></svg>Falar no WhatsApp</a>
         <a class="btn btn-ghost" href="#como-funciona">Como funciona</a>
@@ -257,13 +261,19 @@
 <section id="atletas">
   <div class="wrap">
     <p class="eyebrow">Referência em protetor bucal para lutadores</p>
-    <h2 class="display sec-title">Lutadores profissionais em nível do UFC usam. <span class="accent">Você também pode.</span></h2>
-    <p class="sec-sub">Atletas profissionais de luta, em nível do UFC, treinam e lutam com Mempo. E o protetor deles é o mesmo que fazemos para quem está começando: sob medida e com o mesmo cuidado.</p>
-    <div class="athletes" id="athletes" hidden></div>
+    <h2 class="display sec-title">Lutadores do UFC usam. <span class="accent">Você também pode.</span></h2>
+    <p class="sec-sub">Atletas do UFC treinam e lutam com Mempo. E o protetor deles é o mesmo que fazemos para quem está começando: sob medida e com o mesmo cuidado.</p>
+    <div class="athletes">
+      <figure class="athlete reveal"><div class="ph"><img src="assets/atletas/bia-mesquita-1.webp" width="397" height="440" alt="Bia Mesquita com o estojo do protetor Mempo" loading="lazy" decoding="async"></div><figcaption><b>Bia Mesquita</b><span>Atleta do UFC · 10x campeã mundial de jiu-jitsu</span></figcaption></figure>
+      <figure class="athlete reveal wide"><div class="ph"><img src="assets/atletas/jacare-souza.webp" width="399" height="440" alt="Ronaldo “Jacaré” Souza · Ex-lutador do UFC · ao lado do fundador da Mempo" loading="lazy" decoding="async"></div><figcaption><b>Ronaldo “Jacaré” Souza</b><span>Ex-lutador do UFC · ao lado do fundador da Mempo</span></figcaption></figure>
+      <figure class="athlete reveal"><div class="ph"><img src="assets/atletas/serginho-moraes-1.webp" width="329" height="313" alt="Sérgio “Serginho” Moraes" loading="lazy" decoding="async"></div><figcaption><b>Sérgio “Serginho” Moraes</b><span>Ex-lutador do UFC · campeão mundial de jiu-jitsu</span></figcaption></figure>
+      <figure class="athlete reveal"><div class="ph"><img src="assets/atletas/bia-mesquita-2.webp" width="330" height="440" alt="Bia Mesquita · Com o protetor Mempo" loading="lazy" decoding="async"></div><figcaption><b>Bia Mesquita</b><span>Com o protetor Mempo</span></figcaption></figure>
+      <figure class="athlete reveal"><div class="ph"><img src="assets/atletas/serginho-moraes-2.webp" width="305" height="440" alt="Sérgio “Serginho” Moraes · Com o protetor Mempo" loading="lazy" decoding="async"></div><figcaption><b>Sérgio “Serginho” Moraes</b><span>Com o protetor Mempo</span></figcaption></figure>
+    </div>
     <div class="levels">
       <div class="level reveal"><div class="belt"></div><h3>Iniciante</h3><p>Começou a treinar agora? Proteção certa desde o primeiro rola, sem gastar à toa com protetor que não para na boca.</p></div>
       <div class="level reveal"><div class="belt"></div><h3>Amador e competidor</h3><p>Treino pesado e campeonato pedem encaixe firme, respiração livre e confiança para ir pra cima.</p></div>
-      <div class="level reveal"><div class="belt"></div><h3>Profissional</h3><p>O padrão de quem vive da luta, em nível do UFC. Feito sob medida por quem entende de tatame.</p></div>
+      <div class="level reveal"><div class="belt"></div><h3>Profissional</h3><p>O padrão de quem vive da luta, inclusive no UFC. Feito sob medida por quem entende de tatame.</p></div>
     </div>
     <p class="same">Mesmo protetor. Mesmo cuidado. Do iniciante ao UFC.</p>
   </div>
@@ -328,7 +338,7 @@
       <p class="eyebrow">Sobre a Mempo</p>
       <h2 class="display sec-title">Feito por quem vive o tatame.</h2>
       <p class="sec-sub">A Mempo nasceu dentro das artes marciais. Cada protetor é feito por um faixa preta que sabe, na prática, o que um protetor precisa aguentar e o quanto um encaixe ruim atrapalha.</p>
-      <ul class="checks"><li>Protetor bucal profissional feito sob medida</li><li>Usado por atletas profissionais, em nível do UFC</li><li>Atendimento direto e personalizado</li><li>Envio para todo o Brasil</li></ul>
+      <ul class="checks"><li>Protetor bucal profissional feito sob medida</li><li>Usado por atletas do UFC</li><li>Atendimento direto e personalizado</li><li>Envio para todo o Brasil</li></ul>
     </div>
   </div>
 </section>
@@ -384,13 +394,6 @@
 <a class="wa" href="https://wa.me/5511986854074?text=Ol%C3%A1%21%20Quero%20meu%20protetor%20bucal%20Mempo%20sob%20medida." target="_blank" rel="noopener" aria-label="Falar no WhatsApp"><svg><use href="#wa-icon"/></svg></a>
 
 <script>
-  /* Para mostrar atletas: adicione objetos { nome, info, foto } nesta lista. Vazia = seção de cartões fica oculta. */
-  const ATLETAS = [];
-  if (ATLETAS.length) {
-    const box = document.getElementById('athletes');
-    box.innerHTML = ATLETAS.map(a => `<div class="athlete"><img src="${a.foto}" alt="${a.nome}" loading="lazy"><div><b>${a.nome}</b><span>${a.info}</span></div></div>`).join('');
-    box.hidden = false;
-  }
   document.getElementById('y').textContent = new Date().getFullYear();
   const root = document.documentElement, meta = document.getElementById('themeColor');
   const sync = () => meta.setAttribute('content', root.dataset.theme === 'light' ? '#F6F8F1' : '#0C1014');
