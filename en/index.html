@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Mempo | Custom-fit pro mouthguards</title>
-<meta name="description" content="Professional mouthguards custom-made by a black belt. Worn by pro fighters at UFC level. Professional protection that fits your budget.">
+<meta name="description" content="Professional mouthguards custom-made by a black belt. Worn by UFC fighters. Professional protection that fits your budget.">
 <meta property="og:title" content="Mempo">
-<meta property="og:description" content="Professional mouthguards custom-made by a black belt. Worn by pro fighters at UFC level. Professional protection that fits your budget.">
+<meta property="og:description" content="Professional mouthguards custom-made by a black belt. Worn by UFC fighters. Professional protection that fits your budget.">
 <meta property="og:locale" content="en_US">
 <link rel="alternate" hreflang="pt-BR" href="https://luizflaviomatias.github.io/mempo-protecao-bucal/">
 <link rel="alternate" hreflang="es-ES" href="https://luizflaviomatias.github.io/mempo-protecao-bucal/es/">
@@ -115,12 +115,16 @@
   .level h3{font-size:1.15rem;margin-bottom:.35rem}
   .level p{color:var(--muted);font-size:.95rem}
   .same{margin-top:1.5rem;text-align:center;font-family:Anton,sans-serif;text-transform:uppercase;font-size:clamp(1.4rem,3vw,2rem);letter-spacing:.5px}
-  .athletes{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1rem;margin-top:2.5rem}
-  .athlete{border-radius:var(--r);overflow:hidden;background:var(--bg);border:1px solid var(--line)}
-  .athlete img{width:100%;aspect-ratio:4/5;object-fit:cover;display:block}
-  .athlete div{padding:1rem 1.2rem}
+  .athletes{display:grid;grid-template-columns:repeat(3,1fr);grid-auto-flow:dense;gap:1rem;margin-top:2.5rem}
+  .athlete{margin:0;border-radius:var(--r);overflow:hidden;background:var(--bg);border:1px solid var(--line);display:flex;flex-direction:column}
+  .athlete.wide{grid-column:span 2}
+  .athlete .ph{height:340px;display:flex;align-items:flex-end;justify-content:center;overflow:hidden;background:radial-gradient(70% 85% at 50% 100%,rgba(175,254,40,.42),rgba(175,254,40,0) 70%),var(--bg-3)}
+  .athlete .ph img{display:block;max-width:100%;max-height:100%;width:auto;height:auto;-webkit-mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent),linear-gradient(#000 78%,transparent);-webkit-mask-composite:source-in;mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent),linear-gradient(#000 78%,transparent);mask-composite:intersect}
+  .athlete figcaption{padding:1rem 1.2rem;border-top:1px solid var(--line)}
   .athlete b{display:block}
   .athlete span{color:var(--muted);font-size:.88rem}
+  @media(max-width:860px){.athletes{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:520px){.athletes{grid-template-columns:1fr}.athlete.wide{grid-column:auto}.athlete .ph{height:320px}}
   @media(max-width:760px){.levels{grid-template-columns:1fr}}
 
   .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.2rem;margin-top:3.5rem}
@@ -230,9 +234,9 @@
 <section class="hero">
   <div class="wrap hero-grid">
     <div>
-      <span class="tag"><i></i>Used by pro athletes, all the way up to the UFC.</span>
+      <span class="tag"><i></i>Used by UFC athletes.</span>
       <h1 class="display">Professional protection<br><span class="hl">that fits your budget.</span></h1>
-      <p class="lead">The custom-fit mouthguard pro fighters at UFC level wear to train and compete. Now made for you, whatever your belt.</p>
+      <p class="lead">The custom-fit mouthguard UFC fighters wear to train and compete. Now made for you, whatever your belt.</p>
       <div class="hero-ctas">
         <a class="btn btn-primary" href="https://wa.me/5511986854074?text=Hi%21%20I%27d%20like%20a%20custom%20Mempo%20mouthguard." target="_blank" rel="noopener"><svg><use href="#wa-icon"/></svg>Message us on WhatsApp</a>
         <a class="btn btn-ghost" href="#como-funciona">How it works</a>
@@ -257,13 +261,19 @@
 <section id="atletas">
   <div class="wrap">
     <p class="eyebrow">The go-to mouthguard for fighters</p>
-    <h2 class="display sec-title">Pro fighters at UFC level wear it. <span class="accent">So can you.</span></h2>
-    <p class="sec-sub">Pro fighters at UFC level train and fight with Mempo. Their mouthguard is the same one we make for people who are just starting out: custom-fit, with the same care.</p>
-    <div class="athletes" id="athletes" hidden></div>
+    <h2 class="display sec-title">UFC fighters wear it. <span class="accent">So can you.</span></h2>
+    <p class="sec-sub">UFC fighters train and fight with Mempo. Their mouthguard is the same one we make for people who are just starting out: custom-fit, with the same care.</p>
+    <div class="athletes">
+      <figure class="athlete reveal"><div class="ph"><img src="../assets/atletas/bia-mesquita-1.webp" width="397" height="440" alt="Bia Mesquita holding her Mempo mouthguard case" loading="lazy" decoding="async"></div><figcaption><b>Bia Mesquita</b><span>UFC athlete · 10x jiu-jitsu world champion</span></figcaption></figure>
+      <figure class="athlete reveal wide"><div class="ph"><img src="../assets/atletas/jacare-souza.webp" width="399" height="440" alt="Ronaldo “Jacaré” Souza · Former UFC fighter · with Mempo's founder" loading="lazy" decoding="async"></div><figcaption><b>Ronaldo “Jacaré” Souza</b><span>Former UFC fighter · with Mempo's founder</span></figcaption></figure>
+      <figure class="athlete reveal"><div class="ph"><img src="../assets/atletas/serginho-moraes-1.webp" width="329" height="313" alt="Sérgio “Serginho” Moraes" loading="lazy" decoding="async"></div><figcaption><b>Sérgio “Serginho” Moraes</b><span>Former UFC fighter · jiu-jitsu world champion</span></figcaption></figure>
+      <figure class="athlete reveal"><div class="ph"><img src="../assets/atletas/bia-mesquita-2.webp" width="330" height="440" alt="Bia Mesquita · Wearing a Mempo mouthguard" loading="lazy" decoding="async"></div><figcaption><b>Bia Mesquita</b><span>Wearing a Mempo mouthguard</span></figcaption></figure>
+      <figure class="athlete reveal"><div class="ph"><img src="../assets/atletas/serginho-moraes-2.webp" width="305" height="440" alt="Sérgio “Serginho” Moraes · Wearing a Mempo mouthguard" loading="lazy" decoding="async"></div><figcaption><b>Sérgio “Serginho” Moraes</b><span>Wearing a Mempo mouthguard</span></figcaption></figure>
+    </div>
     <div class="levels">
       <div class="level reveal"><div class="belt"></div><h3>Beginner</h3><p>Just started training? Get the right protection from day one, without wasting money on guards that won't stay put.</p></div>
       <div class="level reveal"><div class="belt"></div><h3>Amateur and competitor</h3><p>Hard sparring and tournaments call for a snug fit, free breathing and the confidence to push forward.</p></div>
-      <div class="level reveal"><div class="belt"></div><h3>Professional</h3><p>The standard for people who fight for a living, at UFC level. Custom-made by someone who knows the mat.</p></div>
+      <div class="level reveal"><div class="belt"></div><h3>Professional</h3><p>The standard for people who fight for a living, all the way to the UFC. Custom-made by someone who knows the mat.</p></div>
     </div>
     <p class="same">Same mouthguard. Same care. From beginner to the UFC.</p>
   </div>
@@ -328,7 +338,7 @@
       <p class="eyebrow">About Mempo</p>
       <h2 class="display sec-title">Made by someone who lives on the mat.</h2>
       <p class="sec-sub">Mempo was born in martial arts. Every mouthguard is made by a black belt who knows firsthand what a guard has to withstand and how much a bad fit gets in the way.</p>
-      <ul class="checks"><li>Professional custom-fit mouthguards</li><li>Worn by pro athletes at UFC level</li><li>Direct, personal support</li><li>Shipping across Brazil, solutions for abroad</li></ul>
+      <ul class="checks"><li>Professional custom-fit mouthguards</li><li>Worn by UFC athletes</li><li>Direct, personal support</li><li>Shipping across Brazil, solutions for abroad</li></ul>
     </div>
   </div>
 </section>
@@ -384,13 +394,6 @@
 <a class="wa" href="https://wa.me/5511986854074?text=Hi%21%20I%27d%20like%20a%20custom%20Mempo%20mouthguard." target="_blank" rel="noopener" aria-label="Message us on WhatsApp"><svg><use href="#wa-icon"/></svg></a>
 
 <script>
-  /* Para mostrar atletas: adicione objetos { nome, info, foto } nesta lista. Vazia = seção de cartões fica oculta. */
-  const ATLETAS = [];
-  if (ATLETAS.length) {
-    const box = document.getElementById('athletes');
-    box.innerHTML = ATLETAS.map(a => `<div class="athlete"><img src="${a.foto}" alt="${a.nome}" loading="lazy"><div><b>${a.nome}</b><span>${a.info}</span></div></div>`).join('');
-    box.hidden = false;
-  }
   document.getElementById('y').textContent = new Date().getFullYear();
   const root = document.documentElement, meta = document.getElementById('themeColor');
   const sync = () => meta.setAttribute('content', root.dataset.theme === 'light' ? '#F6F8F1' : '#0C1014');
